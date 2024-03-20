@@ -1015,7 +1015,8 @@ a:focus, a:hover {
   border-radius: 3px;
   padding-bottom: 40px;
   text-align: center;
-  background: #f9f9f9;
+  background: #c5b611;
+  color: #000;
 }
 
 .pricing-table .pricing-item a.btn-main, .pricing-table .pricing-item a.btn-main-sm {
@@ -1030,7 +1031,7 @@ a:focus, a:hover {
 .pricing-table .pricing-item li {
   font-weight: 400;
   padding: 10px 0;
-  color: #666;
+  color: #180606;
 }
 
 .pricing-table .pricing-item li i {
