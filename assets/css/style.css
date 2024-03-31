@@ -149,7 +149,7 @@ a:focus, a:hover {
 }
 
 #preloader {
-  background: #f0326b; /* Fallback background color */
+  background: #860303; /* Fallback background color */
   height: 100%;
   opacity: 1;
   filter: alpha(opacity=100);
@@ -163,8 +163,8 @@ a:focus, a:hover {
 
 .preloader {
   margin: 100px auto;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   position: relative;
   background: url(../../images/logo.png) center/contain no-repeat; /* Set the background image */
 }
@@ -185,11 +185,11 @@ a:focus, a:hover {
 }
 
 @keyframes sk-circleBounceDelay {
-  0%, 80%, 100% {
+  0%, 60%, 100% {
     -webkit-transform: scale(0);
     transform: scale(0);
   }
-  40% {
+  2% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -260,19 +260,32 @@ a:focus, a:hover {
   background-image: linear-gradient(100deg, #f9643d, #fe2a77);
 }
 
-.header-bradcrumb {
-  background: transparent;
+.header.navigation {
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Stick it to the top of the viewport */
+  width: 100%; /* Make it span the entire width */
+  height: fit-content;
+  background-color:#9a0100;/* Add background color */
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.1);  */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
-.header-bradcrumb a, .header-bradcrumb .active {
-  color: #cfcfcf;
-  font-weight: 200;
-  font-family: "Titillium Web", sans-serif;
+.header.navigation .navbar-brand {
+  color: #333; /* Adjust color for brand */
 }
 
-.header-bradcrumb a:hover {
-  color: #f0326b;
+.header.navigation .nav-link {
+  color: #f8f6f6; /* Adjust color for links */
 }
+
+.header.navigation .navbar-toggler {
+  border-color: #333; /* Adjust border color for toggler */
+}
+
+.header.navigation .navbar-toggler span {
+  color: #333; /* Adjust color for toggler icon */
+}
+
 
 .slick-slide {
   outline: none;
@@ -304,7 +317,7 @@ a:focus, a:hover {
   border: 1px solid #f0326b;
   border-radius: 0;
   background: #f0326b;
-  color: #fff;
+  color: #0d0c0c;
 }
 
 .commonTab .tab-content {
@@ -317,13 +330,16 @@ a:focus, a:hover {
 }
 
 .single-page-header {
-  background: #321f1f;
+  background: #9a0100;
   padding: 50px 0;
   text-align: center;
   color: #fff;
   position: relative;
 }
-
+.navbar-brand .logo-text {
+  color: white;
+  font-family: 'Your Stylish Font', sans-serif;
+}
 .single-page-header .breadcrumb {
   background: transparent;
   display: inline-block;
@@ -1253,77 +1269,100 @@ a:focus, a:hover {
 /*=================================================================
   Our Team
   ==================================================================*/
+ /* Styling for profile cards */
 .team-member {
   background: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  width: 250px;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.team-member:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .team-member:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.team-member:hover .mask {
-  opacity: 1;
+/* Styling for member photo */
+.team-member .member-photo {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
 }
 
+.team-member .member-photo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for member content */
 .team-member .member-content {
-  padding: 25px 0;
+  padding: 25px 15px;
 }
 
 .team-member .member-content h3 {
-  font-size: 20px;
-  margin: 0 0 5px;
+  font-size: 22px;
+  margin: 0 0 10px;
   color: #333;
 }
 
 .team-member .member-content span {
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
 }
 
-.team-member .member-content p {
-  color: #777;
-  margin-top: 10px;
-  padding: 0 15px;
-}
-
-.team-member .member-content ul {
-  text-align: center;
+/* Styling for LinkedIn button */
+.team-member .member-content button {
+  background-color: #0077B5;
+  color: #fff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.3s ease-in-out; /* Add box-shadow transition */
+  display: block;
+  margin: 0 auto;
   position: relative;
+  z-index: 1;
 }
 
-.team-member .member-content ul li {
-  margin-right: 7px;
+.team-member .member-content button:hover {
+  background-color: #005d8e;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.team-member .member-content ul li a {
-  font-size: 18px;
-  padding: 10px;
+/* Styling for LinkedIn link */
+.team-member .member-content button a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.team-member .member-content ul li a i {
-  color: #f0326b;
-  background: linear-gradient(100deg, #f9643d, #fe2a77);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Add click animation */
+.team-member .member-content button:active {
+  transform: translateY(0); /* Reset translateY on click */
+  box-shadow: none; /* Remove box-shadow on click */
 }
 
-.team-member .member-content ul li a::hover {
-  background-color: #6cb670;
-  border: 1px solid transparent;
+/* Add hover color change after click */
+.team-member .member-content button:focus {
+  background-color: #005d8e;
 }
 
-.team-member .member-photo {
-  overflow: hidden;
-  position: relative;
+/* Adjust button margin */
+.team-member .member-content button {
+  margin-top: 20px;
 }
 
-.team-member .member-photo img {
-  transition: all 0.6s ease 0s;
-}
-
+  
 /*=================================================================
   Testimonial section
 ==================================================================*/
