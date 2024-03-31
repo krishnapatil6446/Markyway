@@ -846,6 +846,44 @@ a:focus, a:hover {
   font-size: 50px;
   margin-bottom: 20px;
 }
+/* whatsapp */
+
+.nav-whatsapp {
+  position: relative;
+}
+
+.nav-whatsapp .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: auto; /* Set width to auto to take full image size */
+  height: auto; /* Set height to auto to take full image size */
+  background-color: #25D366; /* WhatsApp green color */
+  padding: 8px 16px; /* Adjust padding for rectangular shape */
+  border-radius: 4px; /* Adjust border-radius for rectangular shape */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.3s ease;
+  text-decoration: none; /* Remove default link underline */
+}
+
+.nav-whatsapp .whatsapp-icon {
+  width: 35px; /* Set width of the icon */
+  height: 35px; /* Set height of the icon */
+  margin-right: 8px; /* Add margin between icon and text */
+}
+
+.nav-whatsapp .button-text {
+  color: #fff; /* Set text color */
+  font-weight: bold; /* Make text bold */
+  font-size: 16px; /* Set font size */
+  flex: 1; /* Allow the text to grow and take up remaining space */
+}
+
+.nav-whatsapp .nav-link:hover {
+  transform: scale(1.1);
+}
 
 /*=================================================================
   Item counter section
@@ -894,6 +932,71 @@ a:focus, a:hover {
   color: #666;
 }
 
+/* button top  */
+#btn1 {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#btn1::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#btn1:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#btn1:active {
+  background-color: #555;
+}
+#btn1.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+  width: 77%;
+  margin: 50px auto;
+  font-family: 'Merriweather', serif;
+  font-size: 17px;
+  color: #6c767a;
+  line-height: 1.9;
+}
+@media (min-width: 500px) {
+  .content {
+    width: 43%;
+  }
+  #btn1 {
+    margin: 30px;
+  }
+}
+.content h1 {
+  margin-bottom: -10px;
+  color: #03a9f4;
+  line-height: 1.5;
+}
+.content h3 {
+  font-style: italic;
+  color: #96a2a7;
+}
 /*=================================================================
   Pricing section
 ==================================================================*/
@@ -902,7 +1005,7 @@ a:focus, a:hover {
   border-radius: 3px;
   padding-bottom: 40px;
   text-align: center;
-  background: #c5b611;
+  background: #8e8d7c;
   color: #000;
 }
 
@@ -1066,14 +1169,42 @@ a:focus, a:hover {
 /*=================================================================
   Services section
 ==================================================================*/
-.services .service-block {
-  padding: 30px 20px;
+.service-list .row {
+  display: flex;
 }
 
-@media (max-width: 480px) {
-  .services .service-block {
-    padding: 15px;
-  }
+.service-list .col-md-6 {
+  flex: 1;
+}
+
+.service-list .plan-box {
+  background: linear-gradient(135deg, #ffffff, #f5f5f5);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease;
+  text-align: justify;
+}
+
+.service-list .plan-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-list .plan-box h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-list .plan-box p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.services .service-block {
+  padding: 30px 20px;
 }
 
 .services .service-block .service-icon {
@@ -1098,12 +1229,9 @@ a:focus, a:hover {
   color: #777;
 }
 
-/*=================================================================
-  Services section 2
-==================================================================*/
 @media (max-width: 480px) {
-  .service-2 .p-0 {
-    padding: 0 15px !important;
+  .services .service-block {
+    padding: 15px;
   }
 }
 
@@ -1170,12 +1298,108 @@ a:focus, a:hover {
   color: #f9f9f9;
 }
 
-.client-service-list li{
+.client-service-list li {
   font-size: 20px;
 }
-.client-service-list li i{
+
+.client-service-list li i {
   margin-right: 10px;
   color: #f0326b;
+}
+
+/* Pricing Table Section */
+.pricing-table {
+  background-color: #f5f5f5;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.pricing-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.pricing-item:hover {
+  transform: translateY(-5px);
+}
+
+.price-title {
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  text-align: center;
+}
+
+.price-title h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.price-title p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.value {
+  font-size: 30px;
+  display: block;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #f0326b;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6cb670;
+  transform: translateY(-2px); /* Add slight upward movement on hover */
+}
+
+.animated-button {
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg-pricing {
+  background-color: #feda6a; /* Yellow background color */
+  background-image: linear-gradient(135deg, #feda6a, #f0326b); /* Gradient effect */
+}
+
+.bg-blue {
+  background-color: #3498db;
+}
+
+.bg-green {
+  background-color: #2ecc71;
 }
 
 /*=================================================================
