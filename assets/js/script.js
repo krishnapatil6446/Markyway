@@ -300,3 +300,19 @@ btn.on('click', function(e) {
 	if (map.length != 0) {
 		google.maps.event.addDomListener(window, 'load', initialize);
 	}
+	function reveal() {
+		var reveals = document.querySelectorAll(".reveal");
+	  
+		for (var i = 0; i < reveals.length; i++) {
+		  var windowHeight = window.innerHeight;
+		  var elementTop = reveals[i].getBoundingClientRect().top;
+		  var elementVisible = 150;
+	  
+		  if (elementTop < windowHeight - elementVisible) {
+			reveals[i].classList.add("active");
+		  } else {
+			reveals[i].classList.remove("active");
+		  }
+		}
+	  }
+	  

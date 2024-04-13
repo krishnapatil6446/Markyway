@@ -31,26 +31,25 @@
     </div>
 </div>
 <section class="header navigation">
-<div class=container>
-<div class=row>
-<div class=col-md-12>
-<nav class="navbar navbar-expand-lg">
-<a class=navbar-brand href=../../index.html>
-    <a class="navbar-brand" href="#">
-        <img src="../../images/logo.png" alt="logo" width="35px" height="35px">
-        <span style="color: white; font-family: 'Your Stylish Font', sans-serif;">Markyway</span>
-      </a>
-      
-<div class="d-flex align-items-center">
-<button class=navbar-toggler type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
-<span class=tf-ion-android-menu></span>
-</button>
-<div id=drapeaux class="select-language d-block d-lg-none">
+    <div class=container>
+    <div class=row>
+    <div class=col-md-12>
+    <nav class="navbar navbar-expand-lg">
 
-<!-- <div class="collapse navbar-collapse" id=navigation>
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo.png" alt="logo" width="35px" height="35px">
+            <span style="color: white; font-family: 'Your Stylish Font', sans-serif;">Markyway</span>
+          </a>
+          
+    <div class="d-flex align-items-center">
+    <button class=navbar-toggler type=button data-toggle=collapse data-target=#navigation aria-controls=navigation aria-expanded=false aria-label="Toggle navigation">
+    <span class=tf-ion-android-menu></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id=navigation>
     <ul class="navbar-nav ml-auto">
     <li class=nav-item>
-        <a class=nav-link href="index.html">Home</a>
+        <a class=nav-link href="../../index.html">Home</a>
     </li>
     <li class=nav-item>
     <a class=nav-link href="./">About</a>
@@ -58,21 +57,18 @@
     <li class=nav-item>
     <a class=nav-link href=../service/>Service</a>
     </li>
-    <li class=nav-item>
+    <!-- <li class=nav-item>
     <a class=nav-link href=../portfolio/>Portfolio</a>
     </li>
     <li class=nav-item>
-    <a class=nav-link href=../blog/>Blog</a>
-    </li>
+    <a class=nav-link href=../blog/>Blog</a> -->
+    <!-- </li> -->
     <li class=nav-item>
     <a class=nav-link href="../contact/">Contact</a>
     </li>
     <li class="nav-item d-none d-lg-block">
     <div class="select-language nav-link">
-    <a href=https://demo.gethugothemes.com/navigator/site/fr><img src=https://demo.gethugothemes.com/navigator/site/images/logos/lang-fr.gif alt=IMAGE>fr
-    </a>
-    <a href=https://demo.gethugothemes.com/navigator/site/en class=selected><img src=https://demo.gethugothemes.com/navigator/site/images/logos/lang-en.gif alt=IMAGE>en
-    </a> -->
+   
     </div>
     </li>
     </ul>
@@ -86,14 +82,13 @@
     <div class=container>
     <div class=row>
     <div class=col-md-12>
-        <br>
-    <h3>Contact Us ...</h3>
+    <!-- <h2>About Us ...</h2> -->
     <nav aria-label="breadcrumb mx-auto" role=navigation>
     <ol class=breadcrumb>
     <li class=breadcrumb-item>
     <a href="../../index.html"/>Home</a>
     </li>
-    <li class="breadcrumb-item active" aria-current=page>Contact Us</li>
+    <li class="breadcrumb-item active" aria-current=page>Contact Us ...</li>
     </ol>
     </nav>
     </div>
@@ -144,27 +139,28 @@
                 <div class="contact-form">
                     <form id="contact-form" method="post" action="sendmail.php" role="form">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                            <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                            <input type="email" placeholder="Your Email" class="form-control" name="email" id="email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                            <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>
+                            <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
                         </div>
-                        <div id="mail-success" class="success">
-                            Thank you. The Mailman is on His Way :)
+                        <div id="mail-success" class="success" style="display: none;">
+                            Thank you. Your message has been sent successfully.
                         </div>
-                        <div id="mail-fail" class="error">
-                            Sorry, don't know what happened. Try later :(
+                        <div id="mail-fail" class="error" style="display: none;">
+                            Sorry, there was an error sending your message. Please try again later.
                         </div>
                         <div id="cf-submit">
                             <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
