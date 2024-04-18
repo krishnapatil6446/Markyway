@@ -315,4 +315,25 @@ btn.on('click', function(e) {
 		  }
 		}
 	  }
+// Scroll to top logic
+window.addEventListener('scroll', function() {
+	var scrollToTopButton = document.getElementById('scrollToTopButton');
+  
+	// Show the button when scrolling down the page
+	if (window.scrollY > 300) {
+	  scrollToTopButton.style.display = 'block';
+	} else {
+	  scrollToTopButton.style.display = 'none';
+	}
+  });
+  
+  function scrollToTop() {
+	window.scrollTo({
+	  top: 0,
+	  behavior: 'smooth'
+	});
+  }
+  
+  document.getElementById('scrollToTopButton').addEventListener('click', scrollToTop);
+  
 	  

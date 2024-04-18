@@ -274,7 +274,7 @@ a:focus, a:hover {
 }
 
 .header.navigation .navbar-brand {
-  color: #333; /* Adjust color for brand */
+  color: #ffffff; /* Adjust color for brand */
 }
 
 .header.navigation .nav-link {
@@ -282,11 +282,11 @@ a:focus, a:hover {
 }
 
 .header.navigation .navbar-toggler {
-  border-color: #333; /* Adjust border color for toggler */
+  border-color: #ffffff; /* Adjust border color for toggler */
 }
 
 .header.navigation .navbar-toggler span {
-  color: #333; /* Adjust color for toggler icon */
+  color: #ffffff; /* Adjust color for toggler icon */
 }
 
 
@@ -767,7 +767,7 @@ a:focus, a:hover {
   padding: 15px 0;
   width: 100%;
   margin: 0;
-  background: #f0326b;
+  background: #9a0100;
   color: #fff;
   border-radius: 0;
   cursor: pointer;
@@ -797,7 +797,7 @@ a:focus, a:hover {
   height: 30px;
   width: 30px;
   text-align: center;
-  color: #f0326b;
+  color: #9a0100;
 }
 
 .social-icon li a i {
@@ -810,7 +810,7 @@ a:focus, a:hover {
 .error {
   display: none;
   padding: 10px;
-  color: #D8000C;
+  color: #9a0100;
   border-radius: 4px;
   font-size: 13px;
   background-color: #FFBABA;
@@ -887,6 +887,15 @@ a:focus, a:hover {
 .nav-whatsapp .nav-link:hover {
   transform: scale(1.1);
 }
+
+/* #buttonNav{
+  display: flex;
+  align-items: end;
+  justify-content:baseline;
+  height: auto;
+  width: auto;
+
+} */
 
 /*=================================================================
   Item counter section
@@ -1368,7 +1377,7 @@ ul li {
 
 .btn {
   display: inline-block;
-  background-color: #f0326b;
+  background-color: #9a0100;
   color: #fff;
   padding: 10px 30px;
   border-radius: 5px;
@@ -1957,5 +1966,41 @@ ul li {
 
 .page-404 h1 {
   font-size: 200px;
+}
+
+#projects {
+  padding: 20px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project img {
+  max-width: 100%;
+}
+
+.project h3 {
+  margin-top: 10px;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 1000;
+  display: none; /* Hide the button initially */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Button background color on hover */
 }
 
